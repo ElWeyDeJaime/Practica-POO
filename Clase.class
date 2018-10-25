@@ -1,0 +1,40 @@
+public class Clase{
+	
+	private String Nombre;
+	private int IdClase;
+	private Profesor Prof;
+	private ArrayList<Alum> Alms;
+	private Materia Mat;
+	private ArrayList<Eval> Eval;
+
+	public Clase(int I,String N)
+	{
+		Nombre=N;
+		IdClase=I;
+	}
+
+	public void addProf(Profesor P)
+	{
+		Prof=P;
+	}
+
+	public boolean addAlum(Alum A)
+	{
+		if(Alms.size()>33)
+			return false;
+		Alms.add(A);
+		return true;
+	}
+
+	public void addEval(Eval E)
+	{
+		Eval.add(E);
+	}
+
+	public void addMat(Materia M)
+	{
+		Mat=M;
+	}
+
+
+}
